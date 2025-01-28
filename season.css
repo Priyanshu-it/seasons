@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f0f0f0; /* Fallback background */
+    margin: 0;
+    padding: 0;
+    padding-top: 170px;
+    transition: background-image 1s ease-in-out;
+    box-sizing: border-box; /* Ensure padding/border don't affect layout */
+    position: relative;
+}
+
+header, footer {
+    background: linear-gradient(rgba(50, 130, 180, 1) 0%, rgba(130, 100, 230, 0.9) 100%);
+    color: white;
+    padding: 0.1em 0;
+    width: 100%;
+}
+
+header {
+    top: 0;
+    position: fixed;
+}
+
+footer {
+    bottom: 0;
+}
+
+#current-season {
+    color: #333;
+    border: 2px dashed #4b9cd3;
+    width: 91%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em;
+    position: fixed;
+    top: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#season-months-spring p,
+#season-months-summer p,
+#season-months-autumn p,
+#season-months-winter p {
+    padding: 0.5em;
+    margin: 0 4em;
+    border: dotted 4px rgb(225, 125, 120);
+    border-radius: 5px;
+}
+
+section {
+    padding: 2em;
+}
+
+.season {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(230, 230, 250, 0.8);
+    cursor: pointer;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 300px;
+}
+
+.calendar div {
+    padding: 10px;
+    background-color: rgba(240, 240, 240);
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.calendar div.highlight {
+    background-color: rgba(255, 182, 193, 0.8);
+}
+
+.calendar div:hover, .calendar div:focus {
+    background-color: rgba(220, 220, 220, 0.8);
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+@media (max-width: 600px) {
+    .calendar {
+        max-width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.season live {
+    text-decoration: none;
+    color: rgb(150, 15, 15);
+}
+/* line: 108 */
